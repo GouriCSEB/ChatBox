@@ -1,0 +1,115 @@
+body{
+    background-image: url('images/bg.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body.start-page-active{
+    opacity: 0.3;
+}
+.start-page{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.title {
+    font-family: 'Coiny', system-ui;
+    font-size: 8vw;
+    color: thistle;
+    margin-bottom:40px;
+    text-shadow: 2px 2px thistle;
+    animation: fadeIn 2s  ease-in-out forwards;
+
+}
+.chatroom-container {
+    display: none;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.start-button{
+    background-color: #e493b3;
+    color: #ffff;
+    font-family: 'Coiny', system-ui;
+    font-size: 24px;
+}
+/* Add these to your existing CSS */
+
+.chatroom-container {
+    display: none;
+    width: 80%;
+    max-width: 600px;
+    height: 70vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.chat-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #f0e6ef;
+    border-top: 1px solid #e493b3;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-family: sans-serif;
+}
+
+#sendButton {
+    background-color: #e493b3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Coiny', system-ui;
+}
+
+.message {
+    background-color: #f0e6ef;
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #e493b3;
+    color: white;
+    margin-left: auto;
+}
